@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prediction Result</title>
+
+<style>
+body{
+    font-family:Arial;
+    background:#f4f6f8;
+    text-align:center;
+}
+
+.container{
+    width:70%;
+    margin:auto;
+}
+
+.result{
+    font-size:26px;
+    font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>❤️ Heart Attack Prediction Result</h2>
+
+<p class="result" style="color: {{ color }}">
+    {{ result }}
+</p>
+
+<h3>Risk Level: {{ risk_percent }}%</h3>
+
+<h3>Health Parameter Graph</h3>
+
+<img src="{{ url_for('static', filename=graph) }}" width="600">
+
+<br><br>
+<a href="/">⬅ Back</a>
+
+</div>
+
+</body>
+</html>
